@@ -15,6 +15,9 @@ abstract class ApiTestCase extends TestCase
 {
     protected const DEFAULT_REGION = 'eu';
 
+    protected const CHARACTER_REALM_SLUG = 'ravencrest';
+    protected const CHARACTER_NAME = 'bicmex';
+
     protected function createBlizzardHttpClient(): BlizzardHttpClient
     {
         return new BlizzardHttpClient(
