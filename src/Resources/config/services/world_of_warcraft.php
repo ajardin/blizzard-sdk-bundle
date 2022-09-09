@@ -13,6 +13,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ItemApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\JournalApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MediaSearchApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ModifiedCraftingApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MountApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -31,6 +32,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.journal' => JournalApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.media_search' => MediaSearchApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.modified_crafting' => ModifiedCraftingApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.mount' => MountApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
