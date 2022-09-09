@@ -12,6 +12,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterEncountersApi
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterEquipmentApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterHunterPetsApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMediaApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMythicKeystoneApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi;
@@ -57,6 +58,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.character_equipment' => CharacterEquipmentApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_hunter_pets' => CharacterHunterPetsApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_media' => CharacterMediaApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.character_mythic_keystone' => CharacterMythicKeystoneApi::class,
 
         // Game Data API endpoints
         'ajardin.blizzardsdk.world_of_warcraft.achievement' => AchievementApi::class,
