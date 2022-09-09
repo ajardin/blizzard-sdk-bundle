@@ -10,6 +10,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildCrestApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ItemApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\JournalApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -25,6 +26,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.guild' => GuildApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.guild_crest' => GuildCrestApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.item' => ItemApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.journal' => JournalApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
