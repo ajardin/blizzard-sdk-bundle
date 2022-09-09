@@ -32,6 +32,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RegionApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ReputationApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\SpellApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TalentApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TechTalentApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -69,6 +70,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.reputation' => ReputationApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.spell' => SpellApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.talent' => TalentApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.tech_talent' => TechTalentApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
