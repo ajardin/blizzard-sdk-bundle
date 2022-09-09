@@ -17,6 +17,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfessionsAp
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfileApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterPvpApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterQuestsApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterReputationsApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi;
@@ -66,6 +67,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.character_professions' => CharacterProfessionsApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_pvp' => CharacterPvpApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_quests' => CharacterQuestsApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.character_reputations' => CharacterReputationsApi::class,
 
         // Game Data API endpoints
         'ajardin.blizzardsdk.world_of_warcraft.achievement' => AchievementApi::class,
