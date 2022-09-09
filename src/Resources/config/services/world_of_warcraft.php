@@ -17,6 +17,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MountApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneAffixApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneDungeonApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneLeaderboardApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicRaidLeaderboardApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -39,6 +40,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_affix' => MythicKeystoneAffixApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_dungeon' => MythicKeystoneDungeonApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_leaderboard' => MythicKeystoneLeaderboardApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.mythic_raid_leaderboard' => MythicRaidLeaderboardApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
