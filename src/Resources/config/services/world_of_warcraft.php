@@ -24,6 +24,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableRaceApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableSpecializationApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PowerTypeApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ProfessionApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpSeasonApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -53,6 +54,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.playable_specialization' => PlayableSpecializationApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.power_type' => PowerTypeApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.profession' => ProfessionApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.pvp_season' => PvpSeasonApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
