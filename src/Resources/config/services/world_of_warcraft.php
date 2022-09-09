@@ -27,6 +27,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ProfessionApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpSeasonApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpTierApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\QuestApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RealmApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -59,6 +60,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.pvp_season' => PvpSeasonApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.pvp_tier' => PvpTierApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.quest' => QuestApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.realm' => RealmApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
