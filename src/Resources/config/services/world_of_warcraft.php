@@ -15,6 +15,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MediaSearchApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ModifiedCraftingApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MountApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneAffixApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneDungeonApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -35,6 +36,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.modified_crafting' => ModifiedCraftingApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.mount' => MountApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_affix' => MythicKeystoneAffixApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_dungeon' => MythicKeystoneDungeonApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
