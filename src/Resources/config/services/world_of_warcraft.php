@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AchievementApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AuctionHouseApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AzeriteEssenceApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterAchievementsApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi;
@@ -42,6 +43,10 @@ return static function (ContainerConfigurator $configurator) {
     $services = $configurator->services();
 
     $endpoints = [
+        // Profile API endpoints
+        'ajardin.blizzardsdk.world_of_warcraft.character_achievement' => CharacterAchievementsApi::class,
+
+        // Game Data API endpoints
         'ajardin.blizzardsdk.world_of_warcraft.achievement' => AchievementApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.auction_house' => AuctionHouseApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.azerite_essence' => AzeriteEssenceApi::class,
