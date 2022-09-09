@@ -16,6 +16,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMythicKeyston
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfessionsApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfileApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterPvpApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterQuestsApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi;
@@ -64,6 +65,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.character_mythic_keystone' => CharacterMythicKeystoneApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_professions' => CharacterProfessionsApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_pvp' => CharacterPvpApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.character_quests' => CharacterQuestsApi::class,
 
         // Game Data API endpoints
         'ajardin.blizzardsdk.world_of_warcraft.achievement' => AchievementApi::class,
