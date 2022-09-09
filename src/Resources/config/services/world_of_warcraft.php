@@ -30,6 +30,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\QuestApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RealmApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RegionApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ReputationApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\SpellApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -65,6 +66,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.realm' => RealmApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.region' => RegionApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.reputation' => ReputationApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.spell' => SpellApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
