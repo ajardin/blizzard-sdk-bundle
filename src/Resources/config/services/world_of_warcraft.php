@@ -21,6 +21,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicRaidLeaderboardA
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PetApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableClassApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableRaceApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableSpecializationApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -47,6 +48,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.pet' => PetApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.playable_class' => PlayableClassApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.playable_race' => PlayableRaceApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.playable_specialization' => PlayableSpecializationApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
