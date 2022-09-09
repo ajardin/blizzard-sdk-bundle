@@ -8,6 +8,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AzeriteEssenceApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildCrestApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -21,6 +22,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.covenant' => CovenantApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.creature' => CreatureApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.guild' => GuildApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.guild_crest' => GuildCrestApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
