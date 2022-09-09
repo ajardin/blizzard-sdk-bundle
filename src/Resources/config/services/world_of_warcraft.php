@@ -34,6 +34,7 @@ use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\SpellApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TalentApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TechTalentApi;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TitleApi;
+use Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\WowTokenApi;
 use Ajardin\BlizzardSdkBundle\HttpClient\BlizzardHttpClient;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -73,6 +74,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.talent' => TalentApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.tech_talent' => TechTalentApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.title' => TitleApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.wow_token' => WowTokenApi::class,
     ];
 
     foreach ($endpoints as $service => $class) {
