@@ -69,6 +69,7 @@ return static function (ContainerConfigurator $configurator) {
         'ajardin.blizzardsdk.world_of_warcraft.character_media' => CharacterMediaApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_mythic_keystone' => CharacterMythicKeystoneApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_professions' => CharacterProfessionsApi::class,
+        'ajardin.blizzardsdk.world_of_warcraft.character_profile' => CharacterProfileApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_pvp' => CharacterPvpApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_quests' => CharacterQuestsApi::class,
         'ajardin.blizzardsdk.world_of_warcraft.character_reputations' => CharacterReputationsApi::class,
