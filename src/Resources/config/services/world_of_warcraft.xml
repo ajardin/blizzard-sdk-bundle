@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Game Data APIs -->
+        <service id="ajardin.blizzardsdk.world_of_warcraft.achievement" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AchievementApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AchievementApi" alias="ajardin.blizzardsdk.world_of_warcraft.achievement"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.auction_house" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AuctionHouseApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AuctionHouseApi" alias="ajardin.blizzardsdk.world_of_warcraft.auction_house"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.azerite_essence" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AzeriteEssenceApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\AzeriteEssenceApi" alias="ajardin.blizzardsdk.world_of_warcraft.azerite_essence"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.covenant" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CovenantApi" alias="ajardin.blizzardsdk.world_of_warcraft.covenant"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.creature" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi" alias="ajardin.blizzardsdk.world_of_warcraft.creature"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.guild" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildApi" alias="ajardin.blizzardsdk.world_of_warcraft.guild"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.guild_crest" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildCrestApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\GuildCrestApi" alias="ajardin.blizzardsdk.world_of_warcraft.guild_crest"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.item" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ItemApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ItemApi" alias="ajardin.blizzardsdk.world_of_warcraft.item"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.journal" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\JournalApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\JournalApi" alias="ajardin.blizzardsdk.world_of_warcraft.journal"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.media_search" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MediaSearchApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MediaSearchApi" alias="ajardin.blizzardsdk.world_of_warcraft.media_search"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.modified_crafting" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ModifiedCraftingApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ModifiedCraftingApi" alias="ajardin.blizzardsdk.world_of_warcraft.modified_crafting"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.mount" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MountApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MountApi" alias="ajardin.blizzardsdk.world_of_warcraft.mount"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_affix" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneAffixApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneAffixApi" alias="ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_affix"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_dungeon" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneDungeonApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneDungeonApi" alias="ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_dungeon"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_leaderboard" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneLeaderboardApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneLeaderboardApi" alias="ajardin.blizzardsdk.world_of_warcraft.mythic_keystone_leaderboard"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.mythic_raid_leaderboard" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicRaidLeaderboardApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicRaidLeaderboardApi" alias="ajardin.blizzardsdk.world_of_warcraft.mythic_raid_leaderboard"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.pet" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PetApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PetApi" alias="ajardin.blizzardsdk.world_of_warcraft.pet"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.playable_class" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableClassApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableClassApi" alias="ajardin.blizzardsdk.world_of_warcraft.playable_class"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.playable_race" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableRaceApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableRaceApi" alias="ajardin.blizzardsdk.world_of_warcraft.playable_race"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.playable_specialization" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableSpecializationApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableSpecializationApi" alias="ajardin.blizzardsdk.world_of_warcraft.playable_specialization"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.power_type" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PowerTypeApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PowerTypeApi" alias="ajardin.blizzardsdk.world_of_warcraft.power_type"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.profession" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ProfessionApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ProfessionApi" alias="ajardin.blizzardsdk.world_of_warcraft.profession"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.pvp_season" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpSeasonApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpSeasonApi" alias="ajardin.blizzardsdk.world_of_warcraft.pvp_season"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.pvp_tier" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpTierApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpTierApi" alias="ajardin.blizzardsdk.world_of_warcraft.pvp_tier"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.quest" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\QuestApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\QuestApi" alias="ajardin.blizzardsdk.world_of_warcraft.quest"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.realm" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RealmApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RealmApi" alias="ajardin.blizzardsdk.world_of_warcraft.realm"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.region" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RegionApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\RegionApi" alias="ajardin.blizzardsdk.world_of_warcraft.region"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.reputation" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ReputationApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ReputationApi" alias="ajardin.blizzardsdk.world_of_warcraft.reputation"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.spell" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\SpellApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\SpellApi" alias="ajardin.blizzardsdk.world_of_warcraft.spell"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.talent" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TalentApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TalentApi" alias="ajardin.blizzardsdk.world_of_warcraft.talent"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.tech_talent" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TechTalentApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TechTalentApi" alias="ajardin.blizzardsdk.world_of_warcraft.tech_talent"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.title" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TitleApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\TitleApi" alias="ajardin.blizzardsdk.world_of_warcraft.title"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.wow_token" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\WowTokenApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\WowTokenApi" alias="ajardin.blizzardsdk.world_of_warcraft.wow_token"/>
+
+    <!-- Profile APIs -->
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_achievement" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterAchievementsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterAchievementsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_achievement"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_appearance" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterAppearanceApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterAppearanceApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_appearance"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_collections" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterCollectionsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterCollectionsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_collections"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_encounters" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterEncountersApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterEncountersApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_encounters"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_equipment" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterEquipmentApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterEquipmentApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_equipment"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_hunter_pets" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterHunterPetsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterHunterPetsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_hunter_pets"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_media" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMediaApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMediaApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_media"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_mythic_keystone" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMythicKeystoneApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterMythicKeystoneApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_mythic_keystone"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_professions" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfessionsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfessionsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_professions"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_profile" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfileApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterProfileApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_profile"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_pvp" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterPvpApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterPvpApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_pvp"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_quests" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterQuestsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterQuestsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_quests"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_reputations" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterReputationsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterReputationsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_reputations"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_soulbinds" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterSoulbindsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterSoulbindsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_soulbinds"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_specializations" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterSpecializationsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterSpecializationsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_specializations"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_statistics" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterStatisticsApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterStatisticsApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_statistics"/>
+
+        <service id="ajardin.blizzardsdk.world_of_warcraft.character_titles" class="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterTitlesApi">
+            <argument key="$blizzardHttpClient" type="service" id="ajardin_blizzard_sdk.http_client"/>
+        </service>
+        <service id="Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CharacterTitlesApi" alias="ajardin.blizzardsdk.world_of_warcraft.character_titles"/>
+    </services>
+</container>
