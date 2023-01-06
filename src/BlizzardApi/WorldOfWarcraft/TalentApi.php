@@ -12,6 +12,19 @@ final class TalentApi extends AbstractApi
 {
     use StaticApiTrait;
 
+    public function talentTreeIndex(string $region): ResponseInterface
+    {
+        return $this->get($region, '/data/wow/talent-tree/index');
+    }
+
+    public function talentTree(string $region, int $talentTreeId, ?int $specializationId = null): ResponseInterface
+    {
+        return $specializationId !== null
+            ? $this->get($region, "/data/wow/talent-tree/{$talentTreeId}/playable-specialization/{$specializationId}")
+            : $this->get($region, "/data/wow/talent-tree/{$talentTreeId}")
+        ;
+    }
+
     public function talentIndex(string $region): ResponseInterface
     {
         return $this->get($region, '/data/wow/talent/index');

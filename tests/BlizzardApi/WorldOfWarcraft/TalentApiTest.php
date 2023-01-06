@@ -14,8 +14,26 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
  */
 final class TalentApiTest extends ApiTestCase
 {
+    private const TALENT_TREE_ID = 852; // Subtlety
+    private const TALENT_TREE_SPECIALIZATION_ID = 261; // Subtlety
     private const TALENT_ID = 19234; // Premeditation
     private const PVP_TALENT_ID = 153; // Shadowy Duel
+
+    public function testItRetrievesTalentTreeIndex(): void
+    {
+        $client = new TalentApi($this->createBlizzardHttpClient());
+        $response = $client->talentTreeIndex(self::DEFAULT_REGION);
+
+        $this->assertRequestIsSuccessful($response);
+    }
+
+    public function testItRetrievesTalentTree(): void
+    {
+        $client = new TalentApi($this->createBlizzardHttpClient());
+        $response = $client->talentTree(self::DEFAULT_REGION, self::TALENT_TREE_ID, self::TALENT_TREE_SPECIALIZATION_ID);
+
+        $this->assertRequestIsSuccessful($response);
+    }
 
     public function testItRetrievesTalentIndex(): void
     {
