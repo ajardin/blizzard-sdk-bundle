@@ -9,13 +9,15 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PlayableClassApi
  */
 final class PlayableClassApiTest extends ApiTestCase
 {
     private const PLAYABLE_CLASS_ID = 4; // Rogue
-    
+
     public function testItRetrievesPlayableClassIndex(): void
     {
         $client = new PlayableClassApi($this->createBlizzardHttpClient());

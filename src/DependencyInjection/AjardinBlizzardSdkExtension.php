@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Ajardin\BlizzardSdkBundle\DependencyInjection;
 
-use Ajardin\BlizzardSdkBundle\BlizzardApi\Authentication\Credentials;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;

@@ -9,7 +9,9 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicKeystoneDungeonApi
  */
 final class MythicKeystoneDungeonApiTest extends ApiTestCase

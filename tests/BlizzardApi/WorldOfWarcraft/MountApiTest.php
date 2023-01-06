@@ -9,13 +9,15 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MountApi
  */
 final class MountApiTest extends ApiTestCase
 {
     private const MOUNT_ID = 363; // Invincible
-    
+
     public function testItRetrievesMountsIndex(): void
     {
         $client = new MountApi($this->createBlizzardHttpClient());

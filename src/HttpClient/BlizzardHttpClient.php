@@ -6,7 +6,6 @@ namespace Ajardin\BlizzardSdkBundle\HttpClient;
 
 use Ajardin\BlizzardSdkBundle\BlizzardApi\Authentication\AccessToken;
 use Ajardin\BlizzardSdkBundle\BlizzardApi\Authentication\Credentials;
-use RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -54,7 +53,7 @@ final class BlizzardHttpClient
         try {
             $this->accessToken = new AccessToken($response->toArray());
         } catch (ExceptionInterface $exception) {
-            throw new RuntimeException(sprintf('Failed to refresh access token: %s.', $exception->getMessage()), $exception->getCode(), $exception);
+            throw new \RuntimeException(sprintf('Failed to refresh access token: %s.', $exception->getMessage()), $exception->getCode(), $exception);
         }
     }
 

@@ -9,14 +9,16 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\MythicRaidLeaderboardApi
  */
 final class MythicRaidLeaderboardApiTest extends ApiTestCase
 {
     private const RAID_NAME = 'castle-nathria';
     private const FACTION_NAME = 'alliance';
-    
+
     public function testItRetrievesTheLeaderboard(): void
     {
         $client = new MythicRaidLeaderboardApi($this->createBlizzardHttpClient());

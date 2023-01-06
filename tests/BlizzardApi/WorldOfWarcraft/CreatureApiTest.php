@@ -10,7 +10,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\CreatureApi
  */
 final class CreatureApiTest extends ApiTestCase

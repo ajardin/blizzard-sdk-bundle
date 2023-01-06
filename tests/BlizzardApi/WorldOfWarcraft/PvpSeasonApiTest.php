@@ -9,14 +9,16 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\PvpSeasonApi
  */
 final class PvpSeasonApiTest extends ApiTestCase
 {
     private const PVP_SEASON_ID = 30; // Shadowlands season 1
     private const PVP_BRACKET = '3v3';
-    
+
     public function testItRetrievesPvpSeasonIndex(): void
     {
         $client = new PvpSeasonApi($this->createBlizzardHttpClient());

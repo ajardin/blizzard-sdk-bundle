@@ -9,14 +9,16 @@ use Ajardin\BlizzardSdkBundle\Tests\BlizzardApi\ApiTestCase;
 
 /**
  * @internal
+ *
  * @group functional
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\WorldOfWarcraft\ModifiedCraftingApi
  */
 final class ModifiedCraftingApiTest extends ApiTestCase
 {
     private const MODIFIED_CRAFTING_CATEGORY_ID = 1;
     private const MODIFIED_CRAFTING_SLOT_ID = 16;
-    
+
     public function testItRetrievesModifiedCraftingIndex(): void
     {
         $client = new ModifiedCraftingApi($this->createBlizzardHttpClient());

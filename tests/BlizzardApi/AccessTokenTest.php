@@ -9,7 +9,9 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
+ *
  * @group unit
+ *
  * @covers \Ajardin\BlizzardSdkBundle\BlizzardApi\Authentication\AccessToken
  */
 final class AccessTokenTest extends TestCase
